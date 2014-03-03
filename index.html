@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="mobile webapp development knowledge base" />
+    <meta name="keywords" content="webapp,xo,xo.js" />
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>OXOX - YXData</title>
+    <link rel="stylesheet" href="http://oxox.io/xo/src/css/xo.css" />
+    <link rel="stylesheet" href="http://oxox.io/xo/src/css/xo.bootstrap.css" />
+    <link rel="stylesheet" href="http://oxox.io/xo/src/css/include/xo.logger.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-viewdir="assets/html/">
+
+
+    <!--S 遮罩-->
+    <!--页面切换过程中遮罩用于屏蔽用户操作-->
+    <div id="xoview-common-mask" class="xo_mask hide"></div>
+    <!--E 遮罩-->
+
+    <!--S loader-->
+    <div id="xoview-common-loader" class="xo_loader"><div class="xo_loader_animate"><span></span><span></span><span></span></div></div>
+    <!--E loader-->
+
+    <!--S Logger-->
+    <div id="xoview-common-logger" class="xo_logger hide"><div class="xo_logger_bd"></div></div>
+    <!--E Logger-->
+    
+    <!--3party libs-->
+    <script src="http://oxox.io/xo/src/js/libs/zepto.min.js"></script>
+    <script src="http://oxox.io/xo/src/js/libs/hogan-2.0.0.js"></script>
+
+    <!--XO framework-->
+    <script src="http://oxox.io/xo/dist/js/xo.debug.js?v=20131225_3"></script>
+    
+    <!--app biz code-->
+    <script src="assets/js/views/home/index.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            XO.App.init({
+                debug:true,
+                defaultAnimation:'slideleft'
+            });
+
+            //applicationCache.addEventListener('cached', function(){ init(); });
+            //applicationCache.addEventListener('noupdate', function(){ init(); });
+            //applicationCache.addEventListener('updateready', function(){ init(); });
+            //applicationCache.addEventListener('error', function(){ init(); });
+        });
+    </script>
+</body>
+</html>
